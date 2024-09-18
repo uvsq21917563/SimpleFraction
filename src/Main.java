@@ -12,6 +12,10 @@ public class Main {
         assert testFraction2.toString().equals("Je suis une fraction 0/1"): "Compilateur n disfonctionnel";
         assert testFraction3.toString().equals("Je suis une fraction 0/1"): "Compilateur disfonctionnel";
    
-        System.out.println(UN.nbVirgule());
+        Fraction testFraction4 = new Fraction(5, 10);
+        assert testFraction4.nbVirgule() == 0.5;
+        Fraction testFraction5 = new Fraction(1, 3);
+        assert testFraction5.nbVirgule() == 0.3333333333333333;
+        System.out.println(testFraction5.nbVirgule());
     }
 }

@@ -37,4 +37,13 @@ public class Fraction {
         double d = dénominateur;
         return n/d;
     }
+
+    public String add(Fraction f) {
+        int fntemp = f.numérateur * dénominateur;
+        int ntemp = f.dénominateur * numérateur;
+        int dtemp = f.dénominateur * dénominateur;
+        dénominateur = dtemp;
+        numérateur = ntemp + fntemp;
+        return numérateur + "/" + dénominateur;
+    }
 }
