@@ -1,11 +1,17 @@
 package src;
 public class Main {
 
-    Fraction ZERO = new Fraction(0,1);
-    Fraction UN = new Fraction(1,1);
+    static Fraction ZERO = new Fraction(0,1);
+    static Fraction UN = new Fraction(1,1);
     public static void main(String[] args){
         Fraction testFraction = new Fraction(0, 1);
         Fraction testFraction2 = new Fraction(0);
         Fraction testFraction3 = new Fraction();
+        
+        assert testFraction.toString().equals("Je suis une fraction 0/1") : "Compilateur n&d disfonctionnel";
+        assert testFraction2.toString().equals("Je suis une fraction 0/1"): "Compilateur n disfonctionnel";
+        assert testFraction3.toString().equals("Je suis une fraction 0/1"): "Compilateur disfonctionnel";
+   
+        System.out.println(UN.nbVirgule());
     }
 }

@@ -21,6 +21,20 @@ public class Fraction {
     }
     
     public String toString() {
-        return "Je suis une fraction" + numérateur + "/" + dénominateur;
+        return "Je suis une fraction " + numérateur + "/" + dénominateur;
+    }
+
+    public int getNumerateur() {
+        return numérateur;
+    }
+
+    public int getDénominateur(){
+        return dénominateur;
+    }
+
+    public double nbVirgule(){
+        double n = numérateur;
+        double d = dénominateur;
+        return n/d;
     }
 }
