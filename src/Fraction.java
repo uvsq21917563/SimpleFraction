@@ -46,4 +46,9 @@ public class Fraction {
         numérateur = ntemp + fntemp;
         return numérateur + "/" + dénominateur;
     }
+
+    public boolean egal(Fraction f) {
+        if (nbVirgule() == f.nbVirgule()) {return true;}
+        else {return false;}
+    }
 }

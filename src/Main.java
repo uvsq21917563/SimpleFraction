@@ -16,6 +16,12 @@ public class Main {
         assert testFraction4.nbVirgule() == 0.5;
         Fraction testFraction5 = new Fraction(1, 3);
         assert testFraction5.nbVirgule() == 0.3333333333333333;
-        System.out.println(testFraction5.nbVirgule());
+
+        assert testFraction4.add(UN).equals("15/10");
+        assert testFraction4.add(ZERO).equals("5/10");
+
+        assert testFraction.egal(testFraction2) == true;
+        Fraction tesFraction6 = new Fraction(10,20);
+        assert testFraction4.egal(tesFraction6) == true;
     }
 }
