@@ -23,5 +23,16 @@ public class Main {
         assert testFraction.egal(testFraction2) == true;
         Fraction tesFraction6 = new Fraction(10,20);
         assert testFraction4.egal(tesFraction6) == true;
+
+        Fraction testFraction7 = new Fraction(1, 2);
+        Fraction testFraction8 = new Fraction(3, 4);
+        assert testFraction7.compareTo(testFraction8) < 0 : "Erreur dans la comparaison : 1/2 doit être plus petit que 3/4";
+        assert testFraction8.compareTo(testFraction7) > 0 : "Erreur dans la comparaison : 3/4 doit être plus grand que 1/2";
+        assert testFraction7.compareTo(new Fraction(2, 4)) == 0 : "Erreur dans la comparaison : 1/2 doit être égal à 2/4";
+
+        Number aNumber = java.math.BigDecimal.ONE;
+        Number anotherNumber = new Fraction(1, 2);
+        assert java.lang.Math.abs(aNumber.doubleValue() + anotherNumber.doubleValue() - 1.5) < 1E-8 :
+                "Erreur dans la comparaison de Number : la somme doit être proche de 1.5";
     }
 }
